@@ -7,7 +7,7 @@ import os
 from termcolor import colored
 
 # Provide fallback list if tickers.csv is missing
-def load_tickers(csv_path=r'C:\\Users\\bmgna\\OneDrive\\Documents\\Book1.csv'):
+def load_tickers(csv_path=r'Book1.csv'):
     try:
         df = pd.read_csv(csv_path)
         return df['Ticker'].dropna().unique().tolist()
