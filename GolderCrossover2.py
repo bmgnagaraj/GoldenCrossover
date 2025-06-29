@@ -10,6 +10,7 @@ from termcolor import colored
 def load_tickers(csv_path=r'Book1.csv'):
     try:
         df = pd.read_csv(csv_path)
+
         return df['Ticker'].dropna().unique().tolist()
     except:
         print(f"⚠️  File '{csv_path}' not found. Using default tickers.")
